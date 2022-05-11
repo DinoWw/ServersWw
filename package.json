@@ -1,0 +1,23 @@
+{
+  "name": "serversww",
+  "version": "1.0.0",
+  "description": "Web server for managing game servers hosted on the same machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DinoWw/ServersWw.git"
+  },
+  "author": "DinoWw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DinoWw/ServersWw/issues"
+  },
+  "homepage": "https://github.com/DinoWw/ServersWw#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.0"
+  }
+}
