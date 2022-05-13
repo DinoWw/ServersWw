@@ -1,20 +1,15 @@
+
+// File server initialization
+console.log('File server booting');
 const express = require('express');
-const socket = require("socket.io");
-
 const app = express();
-
-const server = app.listen(3000);
-
+const port = 3000;
+const server = app.listen(port);
 app.use(express.static('public'));
+console.log(`File server running on port ${port}`);
 
 
-const io = socket(server);
-
-io.sockets.on('connection', function(socket){
-	
-	socket.on('mouse', (data) => {
-		socket.broadcast.emit('mouseNormalizedFromServer', data);
-	});
 
 
-});
+//
+var io = require('./sockets/socket_canvas').listen(server);
