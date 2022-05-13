@@ -1,0 +1,9 @@
+{
+  "fileserver": {
+    "port": 3000
+  },
+  "sockets": {
+    "port": 3000,
+    "serverURL": "http://localhost"
+  }
+}

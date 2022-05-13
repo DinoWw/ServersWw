@@ -1,0 +1,9 @@
+{
+  "fileserver": {
+    "port": 8000
+  },
+  "sockets": {
+    "port": 8000,
+    "serverURL": "http://netwwork.duckdns.org"
+  }
+}
