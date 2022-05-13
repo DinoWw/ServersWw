@@ -1,11 +1,11 @@
 let socket;
 
-const config = require("config");
 
 function setup(){
 	createCanvas(700, 700);
 
-	socket = io.connect(`${config.get("sockets.serverURL")}:${config.get("sockets.serverURL")}/canvas`);
+	console.log();
+	socket = io.connect(`${window.location.origin}/canvas`);
 
 	socket.on('mouseNormalizedFromServer', (data) => {
 		fill(0);
