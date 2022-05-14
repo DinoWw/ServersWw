@@ -27,3 +27,6 @@ function mouseDragged(){
 	socket.emit('mouse', {'x': mouseX/width, 'y':mouseY/height});
 	//io.sockets.emmit if the client that sent it should also recieve?
 }
+
+
+//git testinio
