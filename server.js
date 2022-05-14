@@ -20,14 +20,14 @@ const io = socketio(server);
 
 
 const fs = require("fs");
-function getDirectories(path) {
+function getFiles(path) {
   return fs.readdirSync(path).filter(function (file) {
-    return fs.statSync(path+'/'+file).isDirectory();
+    return fs.statSync(path+'/'+file).isFile();
   });
 }
 
 
-const paths = getDirectories("sockets");
+const paths = getFiles("sockets");
 
 
 for(const path of paths){
