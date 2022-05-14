@@ -1,4 +1,3 @@
-
 const config = require('config');
 
 
@@ -16,4 +15,21 @@ console.log(`File server running on port ${port}`);
 
 
 //
-var io = require('./sockets/socket_canvas').listen(server);
+const socketio = require("socket.io");
+const io = socketio(server);
+
+
+const fs = require("fs");
+function getDirectories(path) {
+  return fs.readdirSync(path).filter(function (file) {
+    return fs.statSync(path+'/'+file).isDirectory();
+  });
+}
+
+
+const paths = getDirectories("sockets");
+
+
+for(const path of paths){
+	require(`./sockets/${path}`).listen(io);
+}

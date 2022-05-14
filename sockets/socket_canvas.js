@@ -1,8 +1,6 @@
-const socketio = require("socket.io");
 
-module.exports.listen = function(server){
+module.exports.listen = function(io){
 
-    const io = socketio(server);
     const canvas = io.of('/canvas');
         
 
@@ -12,6 +10,5 @@ module.exports.listen = function(server){
         });
     });
 
-    return io;
 
 };
